@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>J. Sai Sujith Reddy – Junior Data Analyst</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#0a0a0a;--bg2:#2a0508;--card:rgba(20,20,20,.96);--line:rgba(255,255,255,.28);--ink:#ffffff;--muted:#dcdcdc;--on:#ffffff;--btn:#d90012;--c1:#ff4d4d;--c2:#ff8a80;--c3:#ffb3ad;--c4:#ff6b6b;color-scheme:dark;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 Figtree,"Helvetica Neue",Arial,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Bricolage Grotesque",Arial,sans-serif;line-height:1.1;margin:0}
+a{color:var(--c3)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--c2);outline-offset:3px}
+#bar{position:fixed;top:0;left:0;height:5px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--c1),var(--c2),var(--c3),var(--c4));z-index:50}
+.blobs{position:fixed;inset:0;z-index:-1;overflow:hidden;background:radial-gradient(circle at 20% 0,var(--bg2),var(--bg) 60%)}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.26;animation:float 14s ease-in-out infinite alternate}
+.b1{width:46vmax;height:46vmax;background:var(--c1);left:-12vmax;top:-10vmax}
+.b2{width:38vmax;height:38vmax;background:var(--c4);right:-10vmax;top:30vh;animation-delay:-5s}
+.b3{width:32vmax;height:32vmax;background:var(--c3);left:25vw;bottom:-14vmax;animation-delay:-9s;opacity:.18}
+@keyframes float{to{transform:translate(6vmax,5vmax) scale(1.15)}}
+#glow{position:fixed;width:340px;height:340px;margin:-170px 0 0 -170px;border-radius:50%;background:radial-gradient(circle,rgba(255,40,40,.14),transparent 65%);pointer-events:none;z-index:-1;left:50%;top:30%}
+.wrap{max-width:960px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;gap:6px;flex-wrap:wrap;justify-content:center;padding:14px 12px}
+nav a{color:var(--ink);text-decoration:none;font:600 14px Figtree,Arial,sans-serif;padding:8px 14px;border-radius:99px;background:var(--card);border:1px solid var(--line);backdrop-filter:blur(10px);transition:transform .25s,background .25s}
+nav a:hover{transform:translateY(-3px) rotate(-2deg);background:var(--btn);color:var(--on)}
+.hero{min-height:84vh;display:flex;flex-direction:column;justify-content:center;padding:30px 0 50px}
+.hello{font:600 1.1rem Figtree,Arial,sans-serif;color:var(--c2)}
+.wave{display:inline-block;animation:wave 2.2s ease-in-out infinite;transform-origin:70% 70%}
+@keyframes wave{0%,60%,100%{transform:rotate(0)}10%,30%{transform:rotate(16deg)}20%,40%{transform:rotate(-10deg)}50%{transform:rotate(8deg)}}
+h1{font-size:clamp(2.7rem,9vw,5.8rem);font-weight:800;letter-spacing:-.03em;margin:8px 0 14px}
+h1 .ch{display:inline-block;background:linear-gradient(120deg,var(--c1),var(--c2),var(--c3));-webkit-background-clip:text;background-clip:text;color:transparent;background-size:300% 100%;animation:drop .7s cubic-bezier(.2,1.4,.4,1) both,shine 6s linear infinite;animation-delay:calc(var(--i)*45ms),0s}
+@keyframes drop{from{opacity:0;transform:translateY(-.9em) rotate(-12deg) scale(.6)}}
+@keyframes shine{to{background-position:300% 0}}
+.role{font:700 clamp(1.2rem,3.4vw,1.8rem) "Bricolage Grotesque",Arial,sans-serif;min-height:1.5em}
+.role span{color:var(--c3)}
+.caret{display:inline-block;width:3px;height:1.1em;background:var(--c2);margin-left:3px;vertical-align:-.15em;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.lead{max-width:56ch;color:var(--muted);font-size:1.1rem;margin:14px 0 26px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:99px;font:700 .98rem "Bricolage Grotesque",Arial,sans-serif;text-decoration:none;border:2px solid var(--c1);background:var(--card);color:var(--ink);transition:transform .25s cubic-bezier(.3,1.6,.5,1),box-shadow .25s}
+.btn.main{background:var(--btn);border-color:var(--btn);color:var(--on)}
+.btn:hover{transform:translateY(-4px) scale(1.04);box-shadow:0 10px 26px -8px var(--c1)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin-top:40px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;backdrop-filter:blur(8px)}
+.stat b{display:block;font:800 2.4rem "Bricolage Grotesque",Arial,sans-serif;color:var(--c2)}
+.stat span{color:var(--muted);font-size:.92rem}
+.stat:nth-child(2) b{color:var(--c3)}.stat:nth-child(3) b{color:var(--c1)}.stat:nth-child(4) b{color:var(--c4)}
+.band{overflow:hidden;border-block:1px solid var(--line);padding:14px 0;background:var(--card);transform:rotate(-1.2deg);margin:30px -4vw}
+.track{display:flex;gap:34px;width:max-content;animation:marq 28s linear infinite;font:800 1.5rem "Bricolage Grotesque",Arial,sans-serif;white-space:nowrap}
+.track i{font-style:normal;color:var(--c1)}
+@keyframes marq{to{transform:translateX(-50%)}}
+section{padding:70px 0}
+h2{font-size:clamp(2rem,5vw,3rem);font-weight:800;margin-bottom:26px}
+h2::after{content:"";display:block;height:5px;width:0;margin-top:10px;border-radius:9px;background:linear-gradient(90deg,var(--c1),var(--c2));transition:width .9s ease .2s}
+.in h2::after,h2.in::after{width:84px}
+.tl{position:relative;padding-left:34px}
+.tl::before{content:"";position:absolute;left:8px;top:6px;bottom:0;width:3px;border-radius:3px;background:linear-gradient(var(--c3),var(--c4));transform-origin:top;transform:scaleY(var(--p,0))}
+.tl::after{content:"";position:absolute;left:0;top:6px;width:19px;height:19px;border-radius:50%;background:var(--c2);box-shadow:0 0 0 6px rgba(255,77,77,.3)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;backdrop-filter:blur(8px)}
+.meta{color:var(--muted);font-size:.93rem;margin:4px 0 8px}
+ul{padding-left:20px;margin:8px 0}li{margin:7px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:18px;perspective:900px}
+.proj{position:relative;transition:transform .2s ease-out,border-color .3s;transform-style:preserve-3d;overflow:hidden}
+.proj:hover{border-color:var(--c3)}
+.proj::before{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--mx,50%) var(--my,0),rgba(255,255,255,.16),transparent 60%);pointer-events:none}
+.big{font:800 3rem "Bricolage Grotesque",Arial,sans-serif;line-height:1}
+.proj:nth-child(1) .big{color:var(--c1)}.proj:nth-child(2) .big{color:var(--c2)}.proj:nth-child(3) .big{color:var(--c3)}.proj:nth-child(4) .big{color:var(--c4)}
+.bigl{color:var(--muted);font-size:.88rem;margin-bottom:12px}
+.proj h3{font-size:1.3rem;margin-bottom:8px}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.tags span{font:600 .8rem Figtree,Arial,sans-serif;padding:4px 11px;border-radius:99px;border:1px solid var(--line)}
+.skills{display:flex;flex-wrap:wrap;gap:10px}
+.skills .grp{flex:1 1 260px}
+.grp h3{font-size:1.1rem;margin-bottom:10px;color:var(--c2)}
+.pill{display:inline-block;margin:0 6px 8px 0;padding:6px 14px;border-radius:99px;background:var(--card);border:1px solid var(--line);font-weight:500;font-size:.93rem;transition:transform .25s cubic-bezier(.3,1.7,.5,1),background .25s}
+.pill:hover{transform:translateY(-4px) rotate(-3deg) scale(1.08);background:var(--btn);color:var(--on)}
+.reveal{opacity:0;transform:translateY(40px) scale(.97);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.9,.3,1);transition-delay:var(--d,0ms)}
+.reveal.in{opacity:1;transform:none}
+footer{text-align:center;padding:60px 0 70px;color:var(--muted)}
+.mail{font:800 clamp(1.4rem,5vw,2.6rem) "Bricolage Grotesque",Arial,sans-serif;color:var(--ink);text-decoration:none;border-bottom:4px solid var(--c1)}
+.mail:hover{color:var(--c1)}
+@media (max-width:480px){.grid{grid-template-columns:1fr}nav a{padding:7px 11px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}h2::after{width:84px}.tl::before{transform:none}.band{transform:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<div class="blobs" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+<div id="glow" aria-hidden="true"></div>
+
+<nav aria-label="Sections"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
+
+<div class="wrap">
+<header class="hero">
+<div class="hello"><span class="wave" aria-hidden="true">👋</span> Hi, I’m</div>
+<h1 id="name" aria-label="J. Sai Sujith Reddy">J. Sai Sujith Reddy</h1>
+<div class="role">I’m a <span id="type"></span><i class="caret"></i></div>
+<p class="lead">I turn messy transaction data into clear metrics and recommendations people can act on, using SQL, Python and Power BI.</p>
+<div class="cta"><a class="btn main" href="mailto:jsaisujithreddy@gmail.com">Say hello</a><a class="btn" href="#projects">See my projects</a><a class="btn" href="https://github.com/rjsaisujith-coder">GitHub</a><a class="btn" href="https://linkedin.com/in/jsaisujithreddy">LinkedIn</a></div>
+<div class="stats">
+<div class="stat"><b data-n="50000" data-s="+">0</b><span>transactions analysed</span></div>
+<div class="stat"><b data-n="5000" data-s="+">0</b><span>customers segmented</span></div>
+<div class="stat"><b data-n="15" data-s="+">0</b><span>features engineered in SQL</span></div>
+<div class="stat"><b data-n="40" data-s="%">0</b><span>less manual cleaning (internship)</span></div>
+</div>
+</header>
+</div>
+
+<div class="band" aria-hidden="true"><div class="track"><span>SQL <i>✦</i> Python <i>✦</i> Power BI <i>✦</i> Excel <i>✦</i> A/B Testing <i>✦</i> Pandas <i>✦</i> DAX <i>✦</i> BigQuery <i>✦</i> Scikit-learn <i>✦</i> Segmentation <i>✦</i> </span><span>SQL <i>✦</i> Python <i>✦</i> Power BI <i>✦</i> Excel <i>✦</i> A/B Testing <i>✦</i> Pandas <i>✦</i> DAX <i>✦</i> BigQuery <i>✦</i> Scikit-learn <i>✦</i> Segmentation <i>✦</i> </span></div></div>
+
+<main class="wrap">
+<section id="about">
+<h2 class="reveal">About me</h2>
+<p class="reveal" style="max-width:64ch;--d:100ms">I’m a Computer Science graduate with hands-on experience in SQL, Python, Power BI and Excel, built through an industry internship and four analytics projects. I enjoy data cleaning, exploratory analysis, statistical testing, customer segmentation and dashboards, and I care most about data quality and insights a business can use.</p>
+</section>
+
+<section id="experience">
+<h2 class="reveal">Experience</h2>
+<div class="tl" id="tl">
+<div class="card reveal">
+<h3>Data &amp; Development Intern</h3>
+<p class="meta">Jala Technologies · June 2024 – July 2024</p>
+<ul>
+<li>Automated Python/SQL preprocessing pipelines across 3 internal projects, cutting manual data-cleaning effort by about 40% (roughly 8 hours a week).</li>
+<li>Built stakeholder-facing visualizations and investigated discrepancies between source data and dashboard metrics to improve reporting accuracy.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="projects">
+<h2 class="reveal">Projects</h2>
+<div class="grid">
+<article class="card proj reveal"><div class="big" data-n="50000" data-s="+">0</div><div class="bigl">records processed</div><h3>UPI Fraud Detection System</h3>
+<ul><li>Designed BigQuery-compatible fact/dimension schemas and engineered 15+ features with SQL window functions.</li><li>Built a Random Forest model and an 8-KPI Power BI dashboard, and investigated metric discrepancies between SQL and dashboard aggregations.</li></ul>
+<div class="tags"><span>Python</span><span>SQL</span><span>Scikit-learn</span><span>Power BI</span></div></article>
+
+<article class="card proj reveal" style="--d:120ms"><div class="big" data-n="12" data-s="%">0</div><div class="bigl">reported conversion lift</div><h3>A/B Testing &amp; Conversion Rate Analysis</h3>
+<ul><li>Defined event and metric structures for a checkout funnel.</li><li>Applied chi-square and z-tests at 95% confidence, then turned the analysis into a business-facing recommendation.</li></ul>
+<div class="tags"><span>Python</span><span>SciPy</span><span>SQL</span><span>Power BI</span></div></article>
+
+<article class="card proj reveal"><div class="big" data-n="5000" data-s="+">0</div><div class="bigl">customers clustered</div><h3>E-Commerce Customer Segmentation</h3>
+<ul><li>Applied RFM analysis and K-Means clustering to find high-value customer segments.</li><li>Designed separate customer, order and event tables for consistent reporting.</li></ul>
+<div class="tags"><span>Python</span><span>Scikit-learn</span><span>SQL</span><span>Power BI</span></div></article>
+
+<article class="card proj reveal" style="--d:120ms"><div class="big" data-n="85" data-s="%">0</div><div class="bigl">reported model accuracy</div><h3>HR Attrition Analysis &amp; Prediction</h3>
+<ul><li>Used SQL-based EDA to identify major attrition drivers and investigated nulls, duplicates and schema mismatches.</li><li>Built a logistic regression model and summarized findings in Power BI.</li></ul>
+<div class="tags"><span>Python</span><span>MySQL</span><span>Scikit-learn</span><span>Power BI</span></div></article>
+</div>
+<p class="reveal" style="margin-top:26px"><a class="btn main" href="https://github.com/rjsaisujith-coder" target="_blank" rel="noopener">See all projects on GitHub →</a></p>
+</section>
+
+<section id="skills">
+<h2 class="reveal">Skills</h2>
+<div class="skills reveal">
+<div class="grp"><h3>SQL</h3><span class="pill">Joins</span><span class="pill">Aggregations</span><span class="pill">CTEs</span><span class="pill">Window functions</span><span class="pill">MySQL</span><span class="pill">BigQuery</span></div>
+<div class="grp"><h3>Analytics</h3><span class="pill">EDA</span><span class="pill">Data cleaning</span><span class="pill">Data quality</span><span class="pill">A/B testing</span><span class="pill">Hypothesis testing</span><span class="pill">Segmentation</span><span class="pill">KPI analysis</span><span class="pill">Market research</span><span class="pill">Survey design</span></div>
+<div class="grp"><h3>Programming</h3><span class="pill">Python</span><span class="pill">Pandas</span><span class="pill">NumPy</span><span class="pill">Scikit-learn</span></div>
+<div class="grp"><h3>BI &amp; tools</h3><span class="pill">Power BI</span><span class="pill">DAX</span><span class="pill">Excel</span><span class="pill">MongoDB</span><span class="pill">Git</span></div>
+</div>
+</section>
+
+<section id="education">
+<h2 class="reveal">Education &amp; certifications</h2>
+<div class="card reveal">
+<h3>B.Tech, Computer Science Engineering</h3>
+<p class="meta">ICFAI University, Hyderabad · 2022 – 2026 · CGPA 5.35/10</p>
+<div style="margin-top:12px"><span class="pill">Data Analytics Associate</span><span class="pill">SQL Associate</span><span class="pill">Power BI for Beginners</span><span class="pill">Spreadsheet Analyst</span><span class="pill">Market Research Associate</span><span class="pill">Data Analytics Essentials (Cisco)</span></div>
+</div>
+</section>
+</main>
+
+<footer id="contact"><div class="wrap">
+<h2 class="reveal" style="margin-bottom:10px">Let’s work together</h2>
+<p class="reveal" style="margin:0 0 22px">I’m open to junior data analyst roles.</p>
+<a class="mail reveal" href="mailto:jsaisujithreddy@gmail.com">jsaisujithreddy@gmail.com</a>
+<p class="reveal" style="margin-top:22px">Hyderabad, India · <a href="tel:+919182357645">+91-9182357645</a></p>
+</div></footer>
+
+<script>
+(function(){
+var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var name=document.getElementById('name'),t=name.textContent;name.textContent='';
+t.split('').forEach(function(c,i){var s=document.createElement('span');s.className='ch';s.setAttribute('aria-hidden','true');s.style.setProperty('--i',i);s.innerHTML=c===' '?'&nbsp;':c;name.appendChild(s)});
+var words=['Junior Data Analyst','SQL storyteller','Dashboard builder','A/B test explorer'],wi=0,ci=0,del=false,el=document.getElementById('type');
+function type(){var w=words[wi];if(rm){el.textContent=words[0];return}
+el.textContent=w.slice(0,ci);
+if(!del&&ci<w.length){ci++;setTimeout(type,75)}else if(!del){del=true;setTimeout(type,1400)}else if(ci>0){ci--;setTimeout(type,35)}else{del=false;wi=(wi+1)%words.length;setTimeout(type,250)}}
+type();
+function count(e){var n=+e.dataset.n,s=e.dataset.s||'',d=1400,st=null;
+if(rm){e.textContent=n.toLocaleString('en-IN')+s;return}
+function f(ts){if(!st)st=ts;var p=Math.min((ts-st)/d,1),v=Math.round(n*(1-Math.pow(1-p,3)));e.textContent=v.toLocaleString('en-IN')+s;if(p<1)requestAnimationFrame(f)}
+requestAnimationFrame(f)}
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');var c=x.target.querySelectorAll('[data-n]');c.forEach(count);if(x.target.dataset.n)count(x.target);io.unobserve(x.target)}})},{threshold:.18});
+document.querySelectorAll('.reveal,.stats .stat').forEach(function(e){io.observe(e)});
+var bar=document.getElementById('bar'),tl=document.getElementById('tl'),b1=document.querySelector('.b1'),b2=document.querySelector('.b2');
+function sc(){var h=document.documentElement,p=h.scrollTop/(h.scrollHeight-h.clientHeight||1);bar.style.transform='scaleX('+p+')';
+var r=tl.getBoundingClientRect(),v=Math.min(Math.max((innerHeight*.75-r.top)/r.height,0),1);tl.style.setProperty('--p',v);
+if(!rm){b1.style.marginTop=(h.scrollTop*.12)+'px';b2.style.marginTop=(-h.scrollTop*.08)+'px'}}
+addEventListener('scroll',sc,{passive:true});sc();
+var g=document.getElementById('glow');
+addEventListener('pointermove',function(e){g.style.left=e.clientX+'px';g.style.top=e.clientY+'px'},{passive:true});
+document.querySelectorAll('.proj').forEach(function(c){
+c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+c.style.setProperty('--mx',x*100+'%');c.style.setProperty('--my',y*100+'%');
+if(!rm&&e.pointerType==='mouse')c.style.transform='rotateY('+((x-.5)*10)+'deg) rotateX('+((.5-y)*10)+'deg) translateZ(6px)'});
+c.addEventListener('pointerleave',function(){c.style.transform=''})});
+})();
+</script>
+</body>
+</html>
